@@ -1,8 +1,10 @@
-package utils
+package ln2latlng
 
 import (
 	"encoding/json"
 	"errors"
+
+	"github.com/willxm/ln2latlng/utils"
 )
 
 type LocationPoint struct {
@@ -17,7 +19,7 @@ var LocationPointData []byte
 func init() {
 	var err error
 	if LocationPointData == nil {
-		LocationPointData, err = ReadFile("../data/location.json")
+		LocationPointData, err = utils.ReadFile("./data/location.json")
 		if err != nil {
 			panic(err)
 		}

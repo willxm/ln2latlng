@@ -1,4 +1,4 @@
-package utils
+package ln2latlng
 
 import "testing"
 import "fmt"
