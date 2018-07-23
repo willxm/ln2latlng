@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 
+	"os"
+
 	"github.com/willxm/ln2latlng/utils"
 )
 
@@ -19,7 +21,8 @@ var LocationPointData []byte
 func init() {
 	var err error
 	if LocationPointData == nil {
-		LocationPointData, err = utils.ReadFile("./data/location.json")
+		gopath := os.Getenv("GOPATH")
+		LocationPointData, err = utils.ReadFile(gopath + "/src/github.com/willxm/ln2latlng/data/location.json")
 		if err != nil {
 			panic(err)
 		}
