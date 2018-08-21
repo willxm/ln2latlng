@@ -11,4 +11,7 @@ $ go get github.com/willxm/ln2latlng
 import "github.com/willxm/ln2latlng"
 
 ln2latlng.IdCrad2LatLng("idcard")
+
+ln2latlng.IdCard2Area("idcard")
+
 ```
