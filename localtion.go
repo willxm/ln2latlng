@@ -25,7 +25,7 @@ var LocationPointData []byte
 var AreaData map[string]string
 
 func init() {
-	log.Println("init data...")
+	log.Println("init location data...")
 	var err error
 	gopath := os.Getenv("GOPATH")
 	dataPath := gopath + "/src/github.com/willxm/ln2latlng/data/"
